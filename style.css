@@ -22,7 +22,7 @@
 .card-body {
     background-color: rgb(110, 79, 138);
     border-style: groove;
-    border-color: hotpink;
+    border-color: rgb(231, 112, 172);
 }
 
 .form-control {
@@ -33,7 +33,7 @@
 
 
 .form-control {
-    background-color:rgb(236, 139, 187) ;
+    background-color:rgb(216, 154, 185) ;
 }
 
 .text {
@@ -41,5 +41,5 @@
 }
 
 .btn {
-    color: white;
+    color: rgb(48, 45, 45);
 }

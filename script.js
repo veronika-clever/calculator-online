@@ -80,8 +80,9 @@ document.getElementById('btn_multiplication').addEventListener('click', function
   })
 
 document.getElementById('btn_sqrt').addEventListener('click', function () {
-  var val = parseFloat(inputWindow.value);
-  inputWindow.value = Math.sqrt(val);
+  lastOperand = inputWindow.value;
+  operation = 'sqrt';
+  inputWindow.value = '';
   })
 
   document.getElementById('btn_divis').addEventListener('click', function () {
@@ -116,8 +117,12 @@ document.getElementById('btn_calc').addEventListener('click', function () {
       lastOperand = resultTwo;
     }
     if (operation === 'sqrt'){
-      lastOperand = parseFloat(inputWindow.value);
-    inputWindow.value = Math.sqrt(lastOperand);
+      const resultTwo = parseFloat(inputWindow.value);
+      const result = Math.sqrt(resultTwo) ;
+      inputWindow.value = result;
+      aboveWindow.value += "\n" + " √ " + resultTwo + " = " + result;
+      aboveWindow.scrollTop = aboveWindow.clientHeight;
+      lastOperand = resultTwo;
     }
     if (operation === 'divis'){
       const resultTwo = parseFloat(inputWindow.value);
