@@ -61,6 +61,15 @@ document.querySelector("#btn_point").addEventListener('click', function () {
     }
 })
 
+
+document.getElementById('unar_min').addEventListener('click', function () {
+  if(inputWindow.value[0] == '-') {
+      inputWindow.value = inputWindow.value.substring(1);
+  } else {
+      inputWindow.value = '-' + inputWindow.value;
+  }
+})
+
 document.getElementById('btn_sum').addEventListener('click', function () {
     lastOperand = parseFloat(inputWindow.value);
     operation = 'sum';
